@@ -8,10 +8,6 @@ import java.util.List;
 public class ConvertibleService implements Rentable{
     ConvertibleRepo convertibleRepo= new ConvertibleRepo();
 
-    public List<Convertible> findAll(){
-        return convertibleRepo.findAll();
-    }
-
     public List<Convertible> findAllFreeCar(){
         return convertibleRepo.findAll().stream().filter(convertible -> !convertible.isRented()).toList();
     }

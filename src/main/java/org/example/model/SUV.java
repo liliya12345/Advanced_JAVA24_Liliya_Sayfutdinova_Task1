@@ -13,13 +13,6 @@ public class SUV extends Car{
         this.driveOfType = driveOfType;
     }
 
-    public DriveOfType getDriveOfType() {
-        return driveOfType;
-    }
-
-    public void setDriveOfType(DriveOfType driveOfType) {
-        this.driveOfType = driveOfType;
-    }
 
     @Override
     public String toString() {

@@ -1,12 +1,8 @@
 package org.example.repo;
-
-import org.example.model.Car;
 import org.example.model.Convertible;
 import org.example.model.enums.TypeOfEngine;
 import org.example.model.enums.TypeOfGearBox;
 import org.example.model.enums.TypeOfRoof;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ConvertibleRepo {

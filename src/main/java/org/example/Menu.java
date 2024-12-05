@@ -63,7 +63,7 @@ public class Menu {
                     System.out.println("The list of rented vehicle");
                     List<VehicleDto> listVehiclesRented = vehicleService.getListVehiclesRented();
                     listVehiclesRented.forEach(System.out::println);
-                    if (listVehiclesRented.size() == 0) {
+                    if (listVehiclesRented.isEmpty()) {
                         System.out.println("You dont have a rented vehicle to return");
                     } else {
                         System.out.println("Enter the number of the vehicle you want to return");

@@ -12,14 +12,6 @@ public class Convertible extends Car {
             this.typeOfRoof = typeOfRoof;
       }
 
-      public TypeOfRoof getTypeOfRoof() {
-            return typeOfRoof;
-      }
-
-      public void setTypeOfRoof(TypeOfRoof typeOfRoof) {
-            this.typeOfRoof = typeOfRoof;
-      }
-
       @Override
       public String toString() {
             return id +"."+"Model: " +vehicleManufacturer +" "+model+ " ," + "typeOfRoof: " +typeOfRoof+  ", price/day: "+price;

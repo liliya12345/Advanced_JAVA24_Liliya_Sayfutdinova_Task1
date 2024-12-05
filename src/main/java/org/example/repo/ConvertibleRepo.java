@@ -14,17 +14,21 @@ public class ConvertibleRepo {
                 new Convertible(17,"BMW",85,false,"SDZ453",2022,"M4",5,5, TypeOfGearBox.AUTOMATIC, TypeOfEngine.PETROL, TypeOfRoof.FOLDING),
                 new Convertible(18,"BMW",96,false,"RDF123",2024,"M5",5,5, TypeOfGearBox.AUTOMATIC, TypeOfEngine.PETROL, TypeOfRoof.FOLDING));
 
+      //metod som returnera list med alla Convertible
     public List<Convertible> findAll() {
         return convertibleList;
     }
+    //metod som hitta convertible by id och sätta true om car är rented.
     public Convertible findById(int id) {
         return findAll().stream().filter(convertible -> convertible.getId() == id).findFirst().orElse(null);
     }
+    //metod som hitta och returnera Convertible by id
     public  void  rentConvertible(int id) {
         Convertible convertible = findById(id);
         convertible.setRented(true);
 
     }
+    //metod som hitta convertible by id och sätta false om car är rented.
     public void returnConvertible(int id) {
         Convertible convertible = findById(id);
         convertible.setRented(false);

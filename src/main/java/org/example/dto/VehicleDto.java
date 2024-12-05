@@ -1,5 +1,5 @@
 package org.example.dto;
-
+//Data Transfer Object används för att kapsla in data
 public class VehicleDto {
     private int id;
     private String typeVehicle;
@@ -25,25 +25,6 @@ public class VehicleDto {
         return typeVehicle;
     }
 
-    public void setTypeVehicle(String typeVehicle) {
-        this.typeVehicle = typeVehicle;
-    }
-
-    public String getVehicleManufacturer() {
-        return vehicleManufacturer;
-    }
-
-    public void setVehicleManufacturer(String vehicleManufacturer) {
-        this.vehicleManufacturer = vehicleManufacturer;
-    }
-
-    public String getVehicleModel() {
-        return vehicleModel;
-    }
-
-    public void setVehicleModel(String vehicleModel) {
-        this.vehicleModel = vehicleModel;
-    }
 
     @Override
     public String toString() {

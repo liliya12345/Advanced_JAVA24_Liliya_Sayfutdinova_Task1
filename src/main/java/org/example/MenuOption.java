@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MenuOption {
-
+//Metod som frågar användare vilken vehicle han/hon vill renta och hur många dagar
     public void rentAction(Scanner scanner, Rentable rentable) {
 
 

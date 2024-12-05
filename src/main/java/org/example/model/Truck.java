@@ -1,5 +1,5 @@
 package org.example.model;
-
+//Model av truck som extends av class Vehicle  med constructor
 public class Truck extends Vehicle{
        private double cargoCapacity;
        private int carBodyVolume;
@@ -10,23 +10,6 @@ public class Truck extends Vehicle{
         this.cargoCapacity = cargoCapacity;
         this.carBodyVolume = carBodyVolume;
     }
-
-    public double getCargoCapacity() {
-        return cargoCapacity;
-    }
-
-    public void setCargoCapacity(double cargoCapacity) {
-        this.cargoCapacity = cargoCapacity;
-    }
-
-    public int getCarBodyVolume() {
-        return carBodyVolume;
-    }
-
-    public void setCarBodyVolume(int carBodyVolume) {
-        this.carBodyVolume = carBodyVolume;
-    }
-
 
     @Override
     public String toString() {

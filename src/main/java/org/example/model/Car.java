@@ -3,7 +3,7 @@ package org.example.model;
 import org.example.model.enums.DriveOfType;
 import org.example.model.enums.TypeOfEngine;
 import org.example.model.enums.TypeOfGearBox;
-
+//Model av Car med constructor som extends av Vehicle
 public class Car extends Vehicle {
     private int countOfPassengers;
     private int countOfDoors;
@@ -54,16 +54,6 @@ public class Car extends Vehicle {
 
     @Override
     public String toString() {
-//        return "Car{" +
-//                "countOfPassengers=" + countOfPassengers +
-//                ", countOfDoors=" + countOfDoors +
-//                ", typeOfGearBox=" + typeOfGearBox +
-//                ", typeOfEngine=" + typeOfEngine +
-//                ", vehicleManufacturer='" + vehicleManufacturer + '\'' +
-//                ", price=" + price +
-//                ", rented=" + rented +
-//                ", regNumber='" + regNumber + '\'' +
-//                '}';
         return id +"."+"Model: " +vehicleManufacturer +" "+model+ " ,"+ countOfDoors + " doors,"+ countOfPassengers+ "max passengers, "+ typeOfEngine+ ", "+ typeOfGearBox+ ", price/day: "+price;
     }
 

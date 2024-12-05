@@ -1,7 +1,7 @@
 package org.example.model;
 
 import org.example.service.Rentable;
-
+//class Vehicle som implements av interface Rentable med constructor
 abstract class Vehicle implements Rentable {
     protected  int id;
     protected String vehicleManufacturer;

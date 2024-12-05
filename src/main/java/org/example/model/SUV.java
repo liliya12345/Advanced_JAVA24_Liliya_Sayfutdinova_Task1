@@ -3,7 +3,7 @@ package org.example.model;
 import org.example.model.enums.DriveOfType;
 import org.example.model.enums.TypeOfEngine;
 import org.example.model.enums.TypeOfGearBox;
-
+//Model av Suv som extends av class Car med constructor
 public class SUV extends Car{
     private DriveOfType driveOfType;
 

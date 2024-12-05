@@ -14,7 +14,7 @@ public class VehicleService  {
     TruckService truckService= new TruckService();
     ConvertibleService convertibleService = new ConvertibleService();
     SuvService suvService = new SuvService();
-
+// Metod  som går genom alla vehicle och hitta vihecle som rented och returnera listan med vihecle
     public List<VehicleDto> getListVehiclesRented(){
         List<VehicleDto> vehicleDtos = new ArrayList<>();
         for (Car car : carService.getRentedCar()) {

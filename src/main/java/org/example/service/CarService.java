@@ -4,7 +4,7 @@ import org.example.model.Car;
 import org.example.repo.CarRepo;
 
 import java.util.List;
-
+// Class CarService som implements från Rentable Interface
 public class CarService implements Rentable {
    CarRepo carRepo = new CarRepo();
 
@@ -19,13 +19,13 @@ public class CarService implements Rentable {
         return carRepo.findAll().stream()
                 .filter(car -> car.isRented()).toList();
     }
-
+//overwrite metod från Interface som rent a vehicle by id
     @Override
     public void rent(int id) {
         carRepo.rentCar(id);
 
     }
-
+    //overwrite metod från Interface som count price
     @Override
     public double countPrice(int id, int days) {
         Car byId = carRepo.findById(id);
@@ -34,7 +34,7 @@ public class CarService implements Rentable {
         }
         return 0;
     }
-
+    //overwrite metod från Interface som return  a vehicle by id
     @Override
     public void returnVehicle(int id) {
        carRepo.returnCar(id);

@@ -17,17 +17,21 @@ public class SuvRepo {
             new SUV(24, "Porsche", 100, false, "888JUH", 2023, "Cayenne E-Hybrid", 5, 5, TypeOfGearBox.AUTOMATIC, TypeOfEngine.HYBRID, DriveOfType.AWD)
 
     );
+    //metod som returnera list med alla SUV
    public List<SUV> findAll() {
        return suvList;
    }
+    //metod som hitta och returnera SUV by id
    public  SUV findById(int id) {
      return  findAll().stream().filter(suv -> suv.getId() == id).findFirst().orElse(null);
    }
+    //metod som hitta suv by id och sätta true om car är rented.
    public void rentSuv(int id){
        SUV suv = findById(id);
        suv.setRented(true);
 
    }
+    //metod som hitta och returnera Suv by id
    public void returnSuv(int id){
        SUV suv = findById(id);
        suv.setRented(false);

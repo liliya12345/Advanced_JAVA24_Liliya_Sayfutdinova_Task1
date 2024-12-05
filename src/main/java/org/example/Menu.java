@@ -17,7 +17,7 @@ public class Menu {
     SuvService suvService = new SuvService();
 
 
-
+  //  En metod som startar programmet och kommunicera med användare
     public void startMenu() {
 
         menuProgram.menuProgram();
@@ -26,7 +26,6 @@ public class Menu {
         do {
             //Här visas alla val av menu
 
-            //Här läsas users val av menu
             Scanner scanner = new Scanner(System.in);
             try {
                 choice = scanner.nextInt();
@@ -59,6 +58,7 @@ public class Menu {
                     menuOption.rentAction(scanner,convertibleService);
 
                 }
+                //Skrivas ut alla vehicle som rented
                 case 5 -> {
                     System.out.println("The list of rented vehicle");
                     List<VehicleDto> listVehiclesRented = vehicleService.getListVehiclesRented();
@@ -70,7 +70,12 @@ public class Menu {
                         int vehicleId = scanner.nextInt();
                         VehicleDto vehicle = listVehiclesRented.stream()
                                 .filter(vehicleDto -> vehicleDto.getId() == vehicleId).findFirst().orElse(null);
-                        vehicleService.returnVehicle(vehicle);
+                        if (vehicle != null) {
+                            vehicleService.returnVehicle(vehicle);
+                        }
+                        else {
+                            System.out.println("Invalid input");
+                        }
                     }
 
                 }
@@ -86,4 +91,3 @@ public class Menu {
     }
 }
 
-//TODO case 2-4

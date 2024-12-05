@@ -7,9 +7,6 @@ import java.util.List;
 public class SuvService implements Rentable {
     SuvRepo suvRepo = new SuvRepo();
 
-    public List<SUV> getAll(){
-        return suvRepo.findAll();
-    }
     public List<SUV> getAllFreeSuv(){
         return suvRepo.findAll().stream()
                 .filter(car -> !car.isRented()).toList();

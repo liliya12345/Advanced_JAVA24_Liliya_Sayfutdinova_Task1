@@ -1,8 +1,5 @@
 package org.example.repo;
-
-import org.example.model.SUV;
 import org.example.model.Truck;
-
 import java.util.List;
 
 public class TruckRepo {
@@ -15,18 +12,21 @@ public class TruckRepo {
         new Truck(11,"STILL",40,false,"MMM156",2020,"RX JZ",2,5)
                 );
 
-
+    //metod som returnera list med alla SUV
     public List<Truck> findAll() {
         return truckList;
     }
+    //metod som hitta  SUV by id
     public  Truck findById(int id) {
         return  findAll().stream().filter(suv -> suv.getId() == id).findFirst().orElse(null);
     }
+    //metod som hitta truck by id och sätta true om car är rented.
     public void rentTruck(int id){
         Truck truck = findById(id);
         truck.setRented(true);
 
     }
+    //metod som hitta och returnera Truck by id
     public void returnTruck(int id){
         Truck truck = findById(id);
         truck.setRented(false);

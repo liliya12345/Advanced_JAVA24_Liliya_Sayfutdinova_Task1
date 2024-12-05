@@ -4,7 +4,7 @@ import org.example.model.Convertible;
 import org.example.repo.ConvertibleRepo;
 
 import java.util.List;
-
+// Class ConvertibleService som implements från Rentable Interface
 public class ConvertibleService implements Rentable{
     ConvertibleRepo convertibleRepo= new ConvertibleRepo();
 
@@ -16,12 +16,12 @@ public class ConvertibleService implements Rentable{
 
     }
 
-
+    //overwrite metod från Interface som rent a vehicle by id
     @Override
     public void rent(int id) {
       convertibleRepo.rentConvertible(id);
     }
-
+    //overwrite metod från Interface som count price
     @Override
     public double countPrice(int id, int days) {
         Convertible convertible = convertibleRepo.findById(id);
@@ -30,7 +30,7 @@ public class ConvertibleService implements Rentable{
         }
         else return 0;
     }
-
+    //overwrite metod från Interface som return  a vehicle by id
     @Override
     public void returnVehicle(int id) {
     convertibleRepo.returnConvertible(id);

@@ -5,5 +5,6 @@ public interface Rentable {
     double countPrice(int id,int days);
     void returnVehicle(int id);
 
+
 }
 

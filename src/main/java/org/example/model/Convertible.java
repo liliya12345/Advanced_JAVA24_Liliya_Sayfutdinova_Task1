@@ -22,12 +22,7 @@ public class Convertible extends Car {
 
       @Override
       public String toString() {
-            return "Convertible{" +
-                    "typeOfRoof=" + typeOfRoof +
-                    ", vehicleManufacturer='" + vehicleManufacturer + '\'' +
-                    ", price=" + price +
-                    ", rented=" + rented +
-                    ", regNumber='" + regNumber + '\'' +
-                    '}';
+            return id +"."+"Model: " +vehicleManufacturer +" "+model+ " ," + "typeOfRoof: " +typeOfRoof+  ", price/day: "+price;
+
       }
 }

@@ -44,14 +44,10 @@ public class VehicleDto {
     public void setVehicleModel(String vehicleModel) {
         this.vehicleModel = vehicleModel;
     }
-//TODO rewrite
+
     @Override
     public String toString() {
-        return "VehicleDto{" +
-                "id=" + id +
-                ", typeVehicle='" + typeVehicle + '\'' +
-                ", vehicleManufacturer='" + vehicleManufacturer + '\'' +
-                ", vehicleModel='" + vehicleModel + '\'' +
-                '}';
+        return
+                id+". Model: "+  typeVehicle+" , "+vehicleManufacturer+", "+vehicleModel;
     }
 }

@@ -30,13 +30,6 @@ public class Truck extends Vehicle{
 
     @Override
     public String toString() {
-        return "Truck{" +
-                "cargoCapacity=" + cargoCapacity +
-                ", carBodyVolume=" + carBodyVolume +
-                ", vehicleManufacturer='" + vehicleManufacturer + '\'' +
-                ", price=" + price +
-                ", rented=" + rented +
-                ", regNumber='" + regNumber + '\'' +
-                '}';
+        return    id +"."+"Model: " +vehicleManufacturer +" "+model+ " ,"+ cargoCapacity +" cargoCapacity, "+carBodyVolume+" carBodyVolume"+ "price/day: "+price;
     }
 }

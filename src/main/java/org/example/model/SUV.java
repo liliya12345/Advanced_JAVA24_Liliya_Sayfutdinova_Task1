@@ -23,13 +23,8 @@ public class SUV extends Car{
 
     @Override
     public String toString() {
-        return "SUV{" +
-                "driveOfType=" + driveOfType +
-                ", vehicleManufacturer='" + vehicleManufacturer + '\'' +
-                ", price=" + price +
-                ", rented=" + rented +
-                ", regNumber='" + regNumber + '\'' +
-                '}';
+        return id +"."+"Model: " +vehicleManufacturer +" "+model+ " ,"+ " driveOfType"+ driveOfType +", price/day: "+price;
+
     }
 }
 

@@ -2,6 +2,9 @@ package org.example.service;
 
 import org.example.dto.VehicleDto;
 import org.example.model.Car;
+import org.example.model.Convertible;
+import org.example.model.SUV;
+import org.example.model.Truck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +20,14 @@ public class VehicleService  {
         for (Car car : carService.getRentedCar()) {
             vehicleDtos.add(new VehicleDto(car.getId(),"Car",car.getVehicleManufacturer(),car.getModel()));
         }
-
-//TODO add another services;
+        for (SUV suv : suvService.getRentedSuv()) {
+            vehicleDtos.add(new VehicleDto(suv.getId(),"SUV",suv.getVehicleManufacturer(),suv.getModel()));
+        }for (Truck truck : truckService.getRentedTruck()) {
+            vehicleDtos.add(new VehicleDto(truck.getId(),"Truck",truck.getVehicleManufacturer(),truck.getModel()));
+        }
+        for (Convertible convertible : convertibleService.getRentedConvertible()) {
+            vehicleDtos.add(new VehicleDto(convertible.getId(),"Convertible",convertible.getVehicleManufacturer(),convertible.getModel()));
+        }
 
         return vehicleDtos;
     }
@@ -29,13 +38,13 @@ public class VehicleService  {
                 carService.returnVehicle(vehicleDto.getId());
             }
                 case"Suv"->{
-                    //TODO
+                    suvService.returnVehicle(vehicleDto.getId());
                 }
                 case"Truck"->{
-                    //TODO
+                    truckService.returnVehicle(vehicleDto.getId());
                 }
                 case"Convertible"->{
-                    //TODO
+                    convertibleService.returnVehicle(vehicleDto.getId());
                 }
         }
    }

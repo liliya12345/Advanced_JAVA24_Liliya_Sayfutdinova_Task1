@@ -20,3 +20,17 @@ Projktet använder DTO som står för Data Transfer Object, vilket är ett desig
 
 ## Att strarta programmet
 När projektet oppnas, i projektverktygsfönstret  leta upp källan | main | java | Main. java-filen och öppna den i editorn/ IntelliJIdea. I redigeraren klickar du på rännstensikonen för att köra programmet och väljer Kör 'Main'. main()'.
+
+
+
+## Hur man skickar en GET-begäran i JavaScript med hjälp av Axios
+För att skicka en GET-begäran med hjälp av Axios så behöver du bara skicka in webbadressen till metoden get(), som returnerar ett
+löfte. Svaret som returneras från löftet kan nås med hjälp av metoden then().
+Låt oss se ett exempel:
+ axios.get("http://localhost:8080/getAllNote")
+            .then((response) => {
+                const notes = response.data
+                setNotes(notes)
+            })
+
+            
